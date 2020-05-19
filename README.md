@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/davidalger/ansible-role-users.svg?branch=master)](https://travis-ci.org/davidalger/ansible-role-users)
-
 # Ansible Role: Users
+
+[![Build Status](https://travis-ci.org/davidalger/ansible-role-users.svg?branch=master)](https://travis-ci.org/davidalger/ansible-role-users)
 
 Role to manage users on a system.
 
