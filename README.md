@@ -45,6 +45,7 @@ The following attributes are required for each user:
 * ssh_key - This should be a list of SSH keys for the user (optional). Each SSH key
   should be included directly and should have no newlines.
 * generate_ssh_key - Whether to generate a SSH key for the user (optional, defaults to no).
+* ssh_key_exclusive - Whether ssh_key list is exclusive (when specified, only one key may be passed; optional, defaults to no).
 
 In addition, the following items are optional for each user:
 
@@ -66,6 +67,7 @@ Example:
         ssh_key:
           - "ssh-rsa AAAAA.... foo@machine"
           - "ssh-rsa AAAAB.... foo2@machine"
+        ssh_key_exclusive: yes
     groups_to_create:
       - name: developers
         gid: 10000
