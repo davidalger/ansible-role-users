@@ -1,6 +1,7 @@
 ---
 galaxy_info:
-  author: Mark Harrison (Modified by SinglePlatform Engineering)
+  role_name: users
+  author: Mark Harrison (Modified by SinglePlatform Engineering and David Alger)
   description: User creation role
   license: MIT
   min_ansible_version: 1.3
