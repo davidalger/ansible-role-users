@@ -60,7 +60,7 @@ Example:
     users:
       - username: foo
         name: Foo Barrington
-        groups: ['wheel','systemd-journal']
+        groups: ['wheel','systemd-journal','sshusers','developers']
         uid: 1001
         home: /local/home/foo
         profile: |
@@ -71,6 +71,8 @@ Example:
           - "ssh-rsa AAAAB.... foo2@machine"
         ssh_key_exclusive: yes
     groups_to_create:
+      - name: sshusers
+        system: yes
       - name: developers
         gid: 10000
     users_deleted:
