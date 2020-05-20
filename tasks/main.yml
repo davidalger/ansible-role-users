@@ -58,6 +58,15 @@
   with_items: "{{ users }}"
   tags: ["users", "configuration"]
 
+- name: Setup user sudo rules
+  template:
+    src: sudoers.d/90-ansible-users
+    dest: /etc/sudoers.d/90-ansible-users
+    owner: root
+    group: root
+    mode: 0400
+  tags: ["users", "configuration", "sudoers"]
+
 - name: Deleted user removal
   user:
     name: "{{ item.username }}"

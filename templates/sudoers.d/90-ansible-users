@@ -1,0 +1,11 @@
+# {{ ansible_managed }}
+
+{% for user in users %}
+{% if user.sudo is defined and user.sudo|length %}
+# User rules for user.username
+{% for entry in user.sudo %}
+{{ user.username }} {{ entry }}
+{% endfor %}
+
+{% endif %}
+{% endfor %}

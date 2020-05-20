@@ -42,6 +42,7 @@ The following attributes are required for each user:
 * groups - A list of supplementary groups for the user.
 * append - If yes, will only add groups, not set them to just the list in groups (optional).
 * profile - A string block for setting custom shell profiles.
+* sudo - This should be a list of user specific rules to be added to /etc/sudoers.d/90-ansible-users (optional).
 * ssh_key - This should be a list of SSH keys for the user (optional). Each SSH key
   should be included directly and should have no newlines.
 * generate_ssh_key - Whether to generate a SSH key for the user (optional, defaults to no).
@@ -64,6 +65,7 @@ Example:
         home: /local/home/foo
         profile: |
           alias ll='ls -lah'
+        sudo: ["ALL=(ALL) NOPASSWD:ALL"]
         ssh_key:
           - "ssh-rsa AAAAA.... foo@machine"
           - "ssh-rsa AAAAB.... foo2@machine"
